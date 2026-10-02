@@ -9,7 +9,7 @@ Northeastern University
 
 <div align="left">
 
-## Abstract
+## Project Summary
 Recent advancements in computer vision have extended semantic segmentation to
 the challenging domain of Referring Image Segmentation (RIS), where the aim is to segment objects based on natural language descriptions. We propose MEMO-RIS, a parameter-efficient learning approach that adapts the Visual Mamba-based Multi-Modal architecture called the ReMamber, with minimal updates during training. Our work introduces the first parameter-efficient tuning framework specifically designed for the Visual Mamba based models in a multi-modal setting, employing Mamba-based adapters that enable multi-scale cross-modal feature interaction while preserving the computational benefits of state-space models. These adapters are inspired by DETRIS. MEMO-RIS incorporates various adapters connected in parallel to the model’s blocks while adding additional parameters constituting only 5.8% of the backbone parameters. We demonstrate the efficacy of our approach by training on the Ref-ZOM dataset, to enhance our model to handle complex linguistic scenarios like multi-object references and descriptions matching no objects—real-world challenges that traditional RIS models struggle with. Our experimental results show that our parameter-efficient approach achieves competitive performance to methods requiring full fine-tuning, establishing a promising direction for efficiently adapting state-space models to multi-modal understanding tasks.
 
