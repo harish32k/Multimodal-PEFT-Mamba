@@ -1,0 +1,358 @@
+Architecture:                       x86_64
+CPU op-mode(s):                     32-bit, 64-bit
+Address sizes:                      52 bits physical, 57 bits virtual
+Byte Order:                         Little Endian
+CPU(s):                             36
+On-line CPU(s) list:                0-35
+Vendor ID:                          GenuineIntel
+Model name:                         Intel(R) Xeon(R) Gold 6354 CPU @ 3.00GHz
+CPU family:                         6
+Model:                              106
+Thread(s) per core:                 1
+Core(s) per socket:                 18
+Socket(s):                          2
+Stepping:                           6
+CPU max MHz:                        3600.0000
+CPU min MHz:                        800.0000
+BogoMIPS:                           6000.00
+Flags:                              fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb cat_l3 invpcid_single ssbd mba ibrs ibpb stibp ibrs_enhanced tpr_shadow flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid cqm rdt_a avx512f avx512dq rdseed adx smap avx512ifma clflushopt clwb intel_pt avx512cd sha_ni avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local split_lock_detect wbnoinvd dtherm ida arat pln pts vnmi avx512vbmi umip pku ospke avx512_vbmi2 gfni vaes vpclmulqdq avx512_vnni avx512_bitalg tme avx512_vpopcntdq la57 rdpid fsrm md_clear pconfig flush_l1d arch_capabilities
+Virtualization:                     VT-x
+L1d cache:                          1.7 MiB (36 instances)
+L1i cache:                          1.1 MiB (36 instances)
+L2 cache:                           45 MiB (36 instances)
+L3 cache:                           78 MiB (2 instances)
+NUMA node(s):                       2
+NUMA node0 CPU(s):                  0-17
+NUMA node1 CPU(s):                  18-35
+Vulnerability Gather data sampling: Mitigation; Microcode
+Vulnerability Itlb multihit:        Not affected
+Vulnerability L1tf:                 Not affected
+Vulnerability Mds:                  Not affected
+Vulnerability Meltdown:             Not affected
+Vulnerability Mmio stale data:      Mitigation; Clear CPU buffers; SMT disabled
+Vulnerability Retbleed:             Not affected
+Vulnerability Spec rstack overflow: Not affected
+Vulnerability Spec store bypass:    Mitigation; Speculative Store Bypass disabled via prctl
+Vulnerability Spectre v1:           Mitigation; usercopy/swapgs barriers and __user pointer sanitization
+Vulnerability Spectre v2:           Mitigation; Enhanced / Automatic IBRS, IBPB conditional, RSB filling, PBRSB-eIBRS SW sequence
+Vulnerability Srbds:                Not affected
+Vulnerability Tsx async abort:      Not affected
+Mon Apr 21 12:21:13 2025       
++---------------------------------------------------------------------------------------+
+| NVIDIA-SMI 545.23.08              Driver Version: 545.23.08    CUDA Version: 12.3     |
+|-----------------------------------------+----------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |         Memory-Usage | GPU-Util  Compute M. |
+|                                         |                      |               MIG M. |
+|=========================================+======================+======================|
+|   0  NVIDIA L40                     On  | 00000000:4F:00.0 Off |                    0 |
+| N/A   34C    P8              74W / 300W |      4MiB / 46068MiB |      0%      Default |
+|                                         |                      |                  N/A |
++-----------------------------------------+----------------------+----------------------+
+|   1  NVIDIA L40                     On  | 00000000:52:00.0 Off |                    0 |
+| N/A   35C    P8              38W / 300W |      4MiB / 46068MiB |      0%      Default |
+|                                         |                      |                  N/A |
++-----------------------------------------+----------------------+----------------------+
+                                                                                         
++---------------------------------------------------------------------------------------+
+| Processes:                                                                            |
+|  GPU   GI   CI        PID   Type   Process name                            GPU Memory |
+|        ID   ID                                                             Usage      |
+|=======================================================================================|
+|  No running processes found                                                           |
++---------------------------------------------------------------------------------------+
+/home/akula.ha/.conda/envs/refseg/lib/python3.10/site-packages/torch/distributed/launch.py:181: FutureWarning: The module torch.distributed.launch is deprecated
+and will be removed in future. Use torchrun.
+Note that --use-env is set by default in torchrun.
+If your script expects `--local-rank` argument to be set, please
+change it to read from `os.environ['LOCAL_RANK']` instead. See 
+https://pytorch.org/docs/stable/distributed.html#launch-utility for 
+further instructions
+
+  warnings.warn(
+[2025-04-21 12:21:16,873] torch.distributed.run: [WARNING] 
+[2025-04-21 12:21:16,873] torch.distributed.run: [WARNING] *****************************************
+[2025-04-21 12:21:16,873] torch.distributed.run: [WARNING] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+[2025-04-21 12:21:16,873] torch.distributed.run: [WARNING] *****************************************
+| distributed init (rank 0): env://
+| distributed init (rank 1): env://
+Namespace(batch_size=14, epochs=50, model='ReMamber_Conv_PEFT', pretrain_path='./pretrain', input_size=480, drop=0.0, drop_path=0.1, model_ema=False, model_ema_decay=0.9999, model_ema_force_cpu=False, opt='adamw', opt_eps=1e-08, opt_betas=None, clip_grad=None, momentum=0.9, weight_decay=0.0001, sched='cosine', lr=3.3e-05, lr_decoder=3.3e-05, lr_backbone=1.65e-05, lr_vssm=1.65e-05, warmup_lr=1e-06, min_lr=3e-07, decay_epochs=13.0, warmup_epochs=2, cooldown_epochs=10, patience_epochs=10, decay_rate=0.1, train_mode=True, finetune='pretrain/ReMamber_Conv.pth', data_path='./ref_dataset/data', data_set='refzom', output_dir='./l_outputs', device='cuda', seed=0, resume='l_outputs/ReMamber_Conv_PEFT_nodadapter/checkpoint_model:c35f5ab7.pth', start_epoch=0, eval=False, dist_eval=False, num_workers=8, pin_mem=True, distributed=True, world_size=2, dist_url='env://', if_amp=True, debug_mode=False, local_rank=0, model_title='model', logging='model', decoder_adapter=False, continue_lr=None, partial_freeze=False, single_epoch=True, lite_baseline=False, dec_only=False, rank=0, gpu=0, dist_backend='nccl')
+True val
+./ref_dataset/data refzom zom
+loading dataset refzom into memory...
+creating index...
+index created.
+DONE (t=15.35s)
+Preparing dataset ......
+False val
+./ref_dataset/data refzom zom
+loading dataset refzom into memory...
+creating index...
+/home/akula.ha/.conda/envs/refseg/lib/python3.10/site-packages/torch/utils/data/dataloader.py:557: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 1, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+index created.
+DONE (t=15.37s)
+Preparing dataset ......
+length of train set: 57624
+length of val set: 15406
+/home/akula.ha/.conda/envs/refseg/lib/python3.10/site-packages/torch/utils/data/dataloader.py:557: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 1, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+Creating model: ReMamber_Conv_PEFT
+kwargs {'use_adapters': False}
+Training the full decoder
+False
+number of params: 17193760
+Loaded checkpoint from 'l_outputs/ReMamber_Conv_PEFT_nodadapter/checkpoint_model:c35f5ab7.pth'
+Continuing training from epoch 11...
+Model id is - model:a785e479
+length of train set: 50000
+length of val set: 3800
+Start training for 50 epochs
+Learning rate: 3.3e-05
+/home/akula.ha/.conda/envs/refseg/lib/python3.10/site-packages/torch/autograd/__init__.py:251: UserWarning: Grad strides do not match bucket view strides. This may indicate grad was not created according to the gradient layout contract, or that the param's strides changed since DDP was constructed.  This is not an error, but may impair performance.
+grad.sizes() = [512, 768, 1, 1], strides() = [768, 1, 768, 768]
+bucket_view.sizes() = [512, 768, 1, 1], strides() = [768, 1, 1, 1] (Triggered internally at ../torch/csrc/distributed/c10d/reducer.cpp:320.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+/home/akula.ha/.conda/envs/refseg/lib/python3.10/site-packages/torch/autograd/__init__.py:251: UserWarning: Grad strides do not match bucket view strides. This may indicate grad was not created according to the gradient layout contract, or that the param's strides changed since DDP was constructed.  This is not an error, but may impair performance.
+grad.sizes() = [512, 768, 1, 1], strides() = [768, 1, 768, 768]
+bucket_view.sizes() = [512, 768, 1, 1], strides() = [768, 1, 1, 1] (Triggered internally at ../torch/csrc/distributed/c10d/reducer.cpp:320.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+Epoch: [11]  [   0/1786]  eta: 16:46:57  lr: 0.000029  train_loss: 0.1932 (0.1932)  train_iou: 0.6583 (0.6583)  time: 33.8283  data: 9.8073  max mem: 39350
+Epoch: [11]  [  20/1786]  eta: 1:25:17  lr: 0.000029  train_loss: 0.1345 (0.1491)  train_iou: 0.7057 (0.7045)  time: 1.3510  data: 0.0045  max mem: 39350
+Epoch: [11]  [  40/1786]  eta: 1:02:14  lr: 0.000029  train_loss: 0.1788 (0.1889)  train_iou: 0.6258 (0.6713)  time: 1.3420  data: 0.0079  max mem: 39350
+Epoch: [11]  [  60/1786]  eta: 0:53:47  lr: 0.000029  train_loss: 0.1494 (0.1810)  train_iou: 0.6396 (0.6660)  time: 1.3182  data: 0.0066  max mem: 39350
+Epoch: [11]  [  80/1786]  eta: 0:49:13  lr: 0.000029  train_loss: 0.1459 (0.1771)  train_iou: 0.6686 (0.6677)  time: 1.3084  data: 0.0084  max mem: 39350
+Epoch: [11]  [ 100/1786]  eta: 0:46:15  lr: 0.000029  train_loss: 0.1291 (0.1758)  train_iou: 0.7052 (0.6750)  time: 1.3037  data: 0.0086  max mem: 39350
+Epoch: [11]  [ 120/1786]  eta: 0:44:10  lr: 0.000029  train_loss: 0.1576 (0.1785)  train_iou: 0.6963 (0.6816)  time: 1.3091  data: 0.0077  max mem: 39350
+Epoch: [11]  [ 140/1786]  eta: 0:42:32  lr: 0.000029  train_loss: 0.1816 (0.1795)  train_iou: 0.7131 (0.6834)  time: 1.3096  data: 0.0100  max mem: 39350
+Epoch: [11]  [ 160/1786]  eta: 0:41:14  lr: 0.000029  train_loss: 0.1221 (0.1765)  train_iou: 0.6819 (0.6819)  time: 1.3181  data: 0.0054  max mem: 39350
+Epoch: [11]  [ 180/1786]  eta: 0:40:07  lr: 0.000029  train_loss: 0.1244 (0.1782)  train_iou: 0.6457 (0.6809)  time: 1.3139  data: 0.0063  max mem: 39350
+Epoch: [11]  [ 200/1786]  eta: 0:39:08  lr: 0.000029  train_loss: 0.1337 (0.1774)  train_iou: 0.6682 (0.6801)  time: 1.3184  data: 0.0070  max mem: 39350
+Epoch: [11]  [ 220/1786]  eta: 0:38:16  lr: 0.000029  train_loss: 0.1972 (0.1799)  train_iou: 0.7006 (0.6823)  time: 1.3187  data: 0.0057  max mem: 39350
+Epoch: [11]  [ 240/1786]  eta: 0:37:27  lr: 0.000029  train_loss: 0.1319 (0.1770)  train_iou: 0.7034 (0.6843)  time: 1.3125  data: 0.0114  max mem: 39350
+Epoch: [11]  [ 260/1786]  eta: 0:36:41  lr: 0.000029  train_loss: 0.1722 (0.1790)  train_iou: 0.7022 (0.6857)  time: 1.3113  data: 0.0050  max mem: 39350
+Epoch: [11]  [ 280/1786]  eta: 0:35:58  lr: 0.000029  train_loss: 0.1752 (0.1797)  train_iou: 0.6608 (0.6837)  time: 1.3091  data: 0.0066  max mem: 39350
+Epoch: [11]  [ 300/1786]  eta: 0:35:17  lr: 0.000029  train_loss: 0.1473 (0.1802)  train_iou: 0.6190 (0.6808)  time: 1.3081  data: 0.0070  max mem: 39350
+Epoch: [11]  [ 320/1786]  eta: 0:34:36  lr: 0.000029  train_loss: 0.1525 (0.1793)  train_iou: 0.6952 (0.6816)  time: 1.2956  data: 0.0080  max mem: 39350
+Epoch: [11]  [ 340/1786]  eta: 0:33:57  lr: 0.000029  train_loss: 0.1395 (0.1792)  train_iou: 0.6520 (0.6811)  time: 1.2905  data: 0.0071  max mem: 39350
+Epoch: [11]  [ 360/1786]  eta: 0:33:20  lr: 0.000029  train_loss: 0.1215 (0.1778)  train_iou: 0.6833 (0.6819)  time: 1.2968  data: 0.0080  max mem: 39350
+Epoch: [11]  [ 380/1786]  eta: 0:32:44  lr: 0.000029  train_loss: 0.1291 (0.1764)  train_iou: 0.6985 (0.6816)  time: 1.2898  data: 0.0075  max mem: 39350
+Epoch: [11]  [ 400/1786]  eta: 0:32:09  lr: 0.000029  train_loss: 0.1565 (0.1773)  train_iou: 0.6629 (0.6811)  time: 1.2894  data: 0.0096  max mem: 39350
+Epoch: [11]  [ 420/1786]  eta: 0:31:34  lr: 0.000029  train_loss: 0.1478 (0.1762)  train_iou: 0.6505 (0.6818)  time: 1.2962  data: 0.0087  max mem: 39350
+Epoch: [11]  [ 440/1786]  eta: 0:31:01  lr: 0.000029  train_loss: 0.1699 (0.1770)  train_iou: 0.6453 (0.6803)  time: 1.2993  data: 0.0096  max mem: 39350
+Epoch: [11]  [ 460/1786]  eta: 0:30:29  lr: 0.000029  train_loss: 0.1162 (0.1768)  train_iou: 0.7029 (0.6814)  time: 1.2994  data: 0.0052  max mem: 39350
+Epoch: [11]  [ 480/1786]  eta: 0:29:57  lr: 0.000029  train_loss: 0.1892 (0.1772)  train_iou: 0.6664 (0.6809)  time: 1.2985  data: 0.0055  max mem: 39350
+Epoch: [11]  [ 500/1786]  eta: 0:29:25  lr: 0.000029  train_loss: 0.1653 (0.1784)  train_iou: 0.6323 (0.6793)  time: 1.2940  data: 0.0067  max mem: 39350
+Epoch: [11]  [ 520/1786]  eta: 0:28:54  lr: 0.000029  train_loss: 0.1563 (0.1781)  train_iou: 0.7205 (0.6806)  time: 1.2976  data: 0.0072  max mem: 39350
+Epoch: [11]  [ 540/1786]  eta: 0:28:23  lr: 0.000029  train_loss: 0.1465 (0.1789)  train_iou: 0.6791 (0.6801)  time: 1.2920  data: 0.0063  max mem: 39350
+Epoch: [11]  [ 560/1786]  eta: 0:27:53  lr: 0.000029  train_loss: 0.1638 (0.1792)  train_iou: 0.6989 (0.6804)  time: 1.2962  data: 0.0075  max mem: 39350
+Epoch: [11]  [ 580/1786]  eta: 0:27:23  lr: 0.000029  train_loss: 0.1847 (0.1794)  train_iou: 0.7061 (0.6814)  time: 1.3024  data: 0.0057  max mem: 39350
+Epoch: [11]  [ 600/1786]  eta: 0:26:53  lr: 0.000029  train_loss: 0.1683 (0.1798)  train_iou: 0.6984 (0.6820)  time: 1.2971  data: 0.0081  max mem: 39350
+Epoch: [11]  [ 620/1786]  eta: 0:26:23  lr: 0.000029  train_loss: 0.1448 (0.1798)  train_iou: 0.7022 (0.6827)  time: 1.2944  data: 0.0057  max mem: 39350
+Epoch: [11]  [ 640/1786]  eta: 0:25:54  lr: 0.000029  train_loss: 0.1884 (0.1806)  train_iou: 0.6825 (0.6825)  time: 1.2903  data: 0.0064  max mem: 39350
+Epoch: [11]  [ 660/1786]  eta: 0:25:24  lr: 0.000029  train_loss: 0.1635 (0.1803)  train_iou: 0.6472 (0.6816)  time: 1.2946  data: 0.0051  max mem: 39350
+Epoch: [11]  [ 680/1786]  eta: 0:24:55  lr: 0.000029  train_loss: 0.1696 (0.1806)  train_iou: 0.6569 (0.6808)  time: 1.2961  data: 0.0092  max mem: 39350
+Epoch: [11]  [ 700/1786]  eta: 0:24:26  lr: 0.000029  train_loss: 0.1735 (0.1811)  train_iou: 0.7301 (0.6814)  time: 1.2926  data: 0.0074  max mem: 39350
+Epoch: [11]  [ 720/1786]  eta: 0:23:58  lr: 0.000029  train_loss: 0.2118 (0.1819)  train_iou: 0.6247 (0.6804)  time: 1.2984  data: 0.0061  max mem: 39350
+Epoch: [11]  [ 740/1786]  eta: 0:23:29  lr: 0.000029  train_loss: 0.1407 (0.1816)  train_iou: 0.6925 (0.6805)  time: 1.2866  data: 0.0071  max mem: 39350
+Epoch: [11]  [ 760/1786]  eta: 0:23:01  lr: 0.000029  train_loss: 0.1940 (0.1819)  train_iou: 0.6415 (0.6793)  time: 1.2953  data: 0.0051  max mem: 39350
+Epoch: [11]  [ 780/1786]  eta: 0:22:32  lr: 0.000029  train_loss: 0.1362 (0.1822)  train_iou: 0.6662 (0.6782)  time: 1.2871  data: 0.0026  max mem: 39350
+Epoch: [11]  [ 800/1786]  eta: 0:22:04  lr: 0.000029  train_loss: 0.1734 (0.1823)  train_iou: 0.6321 (0.6776)  time: 1.2944  data: 0.0072  max mem: 39350
+Epoch: [11]  [ 820/1786]  eta: 0:21:36  lr: 0.000029  train_loss: 0.1848 (0.1829)  train_iou: 0.6826 (0.6775)  time: 1.2941  data: 0.0083  max mem: 39350
+Epoch: [11]  [ 840/1786]  eta: 0:21:13  lr: 0.000029  train_loss: 0.1267 (0.1822)  train_iou: 0.6467 (0.6774)  time: 1.4947  data: 0.0081  max mem: 39350
+Epoch: [11]  [ 860/1786]  eta: 0:20:45  lr: 0.000029  train_loss: 0.1510 (0.1823)  train_iou: 0.6300 (0.6764)  time: 1.2861  data: 0.0073  max mem: 39350
+Epoch: [11]  [ 880/1786]  eta: 0:20:17  lr: 0.000029  train_loss: 0.1643 (0.1824)  train_iou: 0.7095 (0.6767)  time: 1.2898  data: 0.0084  max mem: 39350
+Epoch: [11]  [ 900/1786]  eta: 0:19:49  lr: 0.000029  train_loss: 0.1399 (0.1830)  train_iou: 0.6642 (0.6767)  time: 1.2916  data: 0.0077  max mem: 39350
+Epoch: [11]  [ 920/1786]  eta: 0:19:21  lr: 0.000029  train_loss: 0.1412 (0.1822)  train_iou: 0.7049 (0.6772)  time: 1.2941  data: 0.0054  max mem: 39350
+Epoch: [11]  [ 940/1786]  eta: 0:18:53  lr: 0.000029  train_loss: 0.1594 (0.1821)  train_iou: 0.6379 (0.6763)  time: 1.2977  data: 0.0104  max mem: 39350
+Epoch: [11]  [ 960/1786]  eta: 0:18:26  lr: 0.000029  train_loss: 0.1679 (0.1822)  train_iou: 0.6990 (0.6767)  time: 1.3020  data: 0.0054  max mem: 39350
+Epoch: [11]  [ 980/1786]  eta: 0:17:58  lr: 0.000029  train_loss: 0.2033 (0.1829)  train_iou: 0.6397 (0.6762)  time: 1.2916  data: 0.0086  max mem: 39350
+Epoch: [11]  [1000/1786]  eta: 0:17:31  lr: 0.000029  train_loss: 0.1609 (0.1826)  train_iou: 0.7202 (0.6768)  time: 1.2997  data: 0.0112  max mem: 39350
+Epoch: [11]  [1020/1786]  eta: 0:17:04  lr: 0.000029  train_loss: 0.1835 (0.1830)  train_iou: 0.6251 (0.6761)  time: 1.2984  data: 0.0056  max mem: 39350
+Epoch: [11]  [1040/1786]  eta: 0:16:36  lr: 0.000029  train_loss: 0.1773 (0.1830)  train_iou: 0.6927 (0.6762)  time: 1.2854  data: 0.0098  max mem: 39350
+Epoch: [11]  [1060/1786]  eta: 0:16:09  lr: 0.000029  train_loss: 0.1539 (0.1827)  train_iou: 0.6765 (0.6760)  time: 1.2951  data: 0.0097  max mem: 39350
+Epoch: [11]  [1080/1786]  eta: 0:15:42  lr: 0.000029  train_loss: 0.1684 (0.1826)  train_iou: 0.6832 (0.6756)  time: 1.2953  data: 0.0083  max mem: 39350
+Epoch: [11]  [1100/1786]  eta: 0:15:14  lr: 0.000029  train_loss: 0.2045 (0.1832)  train_iou: 0.6547 (0.6754)  time: 1.2947  data: 0.0090  max mem: 39350
+Epoch: [11]  [1120/1786]  eta: 0:14:47  lr: 0.000029  train_loss: 0.2038 (0.1840)  train_iou: 0.6827 (0.6753)  time: 1.2912  data: 0.0076  max mem: 39350
+Epoch: [11]  [1140/1786]  eta: 0:14:20  lr: 0.000029  train_loss: 0.2136 (0.1847)  train_iou: 0.6228 (0.6745)  time: 1.2945  data: 0.0148  max mem: 39350
+Epoch: [11]  [1160/1786]  eta: 0:13:53  lr: 0.000029  train_loss: 0.1141 (0.1841)  train_iou: 0.6731 (0.6748)  time: 1.2913  data: 0.0079  max mem: 39350
+Epoch: [11]  [1180/1786]  eta: 0:13:26  lr: 0.000029  train_loss: 0.1742 (0.1840)  train_iou: 0.7197 (0.6751)  time: 1.2965  data: 0.0088  max mem: 39350
+Epoch: [11]  [1200/1786]  eta: 0:12:59  lr: 0.000029  train_loss: 0.1795 (0.1839)  train_iou: 0.6949 (0.6753)  time: 1.2975  data: 0.0067  max mem: 39350
+Epoch: [11]  [1220/1786]  eta: 0:12:32  lr: 0.000029  train_loss: 0.1306 (0.1835)  train_iou: 0.6748 (0.6753)  time: 1.2838  data: 0.0065  max mem: 39350
+Epoch: [11]  [1240/1786]  eta: 0:12:05  lr: 0.000029  train_loss: 0.1820 (0.1835)  train_iou: 0.6250 (0.6751)  time: 1.2910  data: 0.0103  max mem: 39350
+Epoch: [11]  [1260/1786]  eta: 0:11:38  lr: 0.000029  train_loss: 0.1891 (0.1836)  train_iou: 0.6911 (0.6750)  time: 1.2947  data: 0.0107  max mem: 39350
+Epoch: [11]  [1280/1786]  eta: 0:11:11  lr: 0.000029  train_loss: 0.1893 (0.1835)  train_iou: 0.6832 (0.6750)  time: 1.2974  data: 0.0082  max mem: 39350
+Epoch: [11]  [1300/1786]  eta: 0:10:45  lr: 0.000029  train_loss: 0.1150 (0.1829)  train_iou: 0.6731 (0.6753)  time: 1.2987  data: 0.0094  max mem: 39350
+Epoch: [11]  [1320/1786]  eta: 0:10:18  lr: 0.000029  train_loss: 0.1415 (0.1827)  train_iou: 0.7026 (0.6757)  time: 1.2993  data: 0.0082  max mem: 39350
+Epoch: [11]  [1340/1786]  eta: 0:09:51  lr: 0.000029  train_loss: 0.1687 (0.1829)  train_iou: 0.6870 (0.6759)  time: 1.2920  data: 0.0054  max mem: 39350
+Epoch: [11]  [1360/1786]  eta: 0:09:24  lr: 0.000029  train_loss: 0.1882 (0.1836)  train_iou: 0.6356 (0.6754)  time: 1.2947  data: 0.0097  max mem: 39350
+Epoch: [11]  [1380/1786]  eta: 0:08:58  lr: 0.000029  train_loss: 0.1868 (0.1837)  train_iou: 0.6967 (0.6757)  time: 1.2938  data: 0.0101  max mem: 39350
+Epoch: [11]  [1400/1786]  eta: 0:08:31  lr: 0.000029  train_loss: 0.1268 (0.1834)  train_iou: 0.6948 (0.6758)  time: 1.2951  data: 0.0086  max mem: 39350
+Epoch: [11]  [1420/1786]  eta: 0:08:04  lr: 0.000029  train_loss: 0.1370 (0.1830)  train_iou: 0.6802 (0.6757)  time: 1.2984  data: 0.0091  max mem: 39350
+Epoch: [11]  [1440/1786]  eta: 0:07:38  lr: 0.000029  train_loss: 0.1487 (0.1827)  train_iou: 0.7026 (0.6762)  time: 1.2950  data: 0.0076  max mem: 39350
+Epoch: [11]  [1460/1786]  eta: 0:07:11  lr: 0.000029  train_loss: 0.2118 (0.1832)  train_iou: 0.6532 (0.6757)  time: 1.2973  data: 0.0083  max mem: 39350
+Epoch: [11]  [1480/1786]  eta: 0:06:45  lr: 0.000029  train_loss: 0.1920 (0.1835)  train_iou: 0.6186 (0.6752)  time: 1.3036  data: 0.0061  max mem: 39350
+Epoch: [11]  [1500/1786]  eta: 0:06:18  lr: 0.000029  train_loss: 0.2028 (0.1841)  train_iou: 0.6205 (0.6746)  time: 1.3021  data: 0.0078  max mem: 39350
+Epoch: [11]  [1520/1786]  eta: 0:05:51  lr: 0.000029  train_loss: 0.1507 (0.1843)  train_iou: 0.6800 (0.6749)  time: 1.2990  data: 0.0068  max mem: 39350
+Epoch: [11]  [1540/1786]  eta: 0:05:25  lr: 0.000029  train_loss: 0.1984 (0.1845)  train_iou: 0.6272 (0.6747)  time: 1.2970  data: 0.0063  max mem: 39350
+Epoch: [11]  [1560/1786]  eta: 0:04:58  lr: 0.000029  train_loss: 0.1653 (0.1847)  train_iou: 0.6946 (0.6747)  time: 1.2928  data: 0.0085  max mem: 39350
+Epoch: [11]  [1580/1786]  eta: 0:04:32  lr: 0.000029  train_loss: 0.1542 (0.1847)  train_iou: 0.6780 (0.6747)  time: 1.2900  data: 0.0091  max mem: 39350
+Epoch: [11]  [1600/1786]  eta: 0:04:05  lr: 0.000029  train_loss: 0.1775 (0.1848)  train_iou: 0.6481 (0.6745)  time: 1.2932  data: 0.0085  max mem: 39350
+Epoch: [11]  [1620/1786]  eta: 0:03:39  lr: 0.000029  train_loss: 0.1513 (0.1849)  train_iou: 0.6470 (0.6743)  time: 1.2946  data: 0.0102  max mem: 39350
+Epoch: [11]  [1640/1786]  eta: 0:03:12  lr: 0.000029  train_loss: 0.1809 (0.1851)  train_iou: 0.6562 (0.6740)  time: 1.2871  data: 0.0061  max mem: 39350
+Epoch: [11]  [1660/1786]  eta: 0:02:46  lr: 0.000029  train_loss: 0.1631 (0.1851)  train_iou: 0.6508 (0.6740)  time: 1.2948  data: 0.0089  max mem: 39350
+Epoch: [11]  [1680/1786]  eta: 0:02:19  lr: 0.000029  train_loss: 0.1193 (0.1847)  train_iou: 0.6966 (0.6739)  time: 1.2909  data: 0.0035  max mem: 39350
+Epoch: [11]  [1700/1786]  eta: 0:01:53  lr: 0.000029  train_loss: 0.1882 (0.1849)  train_iou: 0.6414 (0.6737)  time: 1.2877  data: 0.0069  max mem: 39350
+Epoch: [11]  [1720/1786]  eta: 0:01:27  lr: 0.000029  train_loss: 0.1090 (0.1845)  train_iou: 0.7399 (0.6741)  time: 1.2948  data: 0.0068  max mem: 39350
+Epoch: [11]  [1740/1786]  eta: 0:01:00  lr: 0.000029  train_loss: 0.1445 (0.1847)  train_iou: 0.6718 (0.6740)  time: 1.2971  data: 0.0068  max mem: 39350
+Epoch: [11]  [1760/1786]  eta: 0:00:34  lr: 0.000029  train_loss: 0.1618 (0.1845)  train_iou: 0.7105 (0.6742)  time: 1.3000  data: 0.0057  max mem: 39350
+Epoch: [11]  [1780/1786]  eta: 0:00:07  lr: 0.000029  train_loss: 0.1399 (0.1841)  train_iou: 0.6933 (0.6744)  time: 1.0980  data: 0.0019  max mem: 39350
+Epoch: [11]  [1785/1786]  eta: 0:00:01  lr: 0.000029  train_loss: 0.1476 (0.1841)  train_iou: 0.6844 (0.6744)  time: 1.6442  data: 0.0008  max mem: 39350
+Epoch: [11] Total time: 0:39:23 (1.3234 s / it)
+Averaged stats: lr: 0.000029  train_loss: 0.1476 (0.1838)  train_iou: 0.6844 (0.6751)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+Test:  [   0/3800]  eta: 5:05:07  inter: 33296.0000 (33296.0000)  union: 35488.0000 (35488.0000)  iou: 0.9382 (0.9382)  time: 4.8177  data: 1.3196  max mem: 39350
+Test:  [  50/3800]  eta: 0:28:06  inter: 17040.0000 (22085.1719)  union: 47671.0000 (40479.9688)  iou: 0.5043 (0.5263)  time: 0.2389  data: 0.0016  max mem: 39350
+Test:  [ 100/3800]  eta: 0:23:31  inter: 20575.0000 (23860.1250)  union: 46546.0000 (41800.3897)  iou: 0.6172 (0.5654)  time: 0.2383  data: 0.0048  max mem: 39350
+Test:  [ 150/3800]  eta: 0:20:27  inter: 18370.0000 (24319.2392)  union: 30100.0000 (39359.9713)  iou: 0.8459 (0.6086)  time: 0.2464  data: 0.0051  max mem: 39350
+Test:  [ 200/3800]  eta: 0:18:44  inter: 33861.0000 (25061.7399)  union: 37628.0000 (39242.0916)  iou: 0.9105 (0.6142)  time: 0.2422  data: 0.0033  max mem: 39350
+Test:  [ 250/3800]  eta: 0:17:39  inter: 14380.0000 (26981.6175)  union: 31492.0000 (40979.9217)  iou: 0.4353 (0.6125)  time: 0.2429  data: 0.0046  max mem: 39350
+Test:  [ 300/3800]  eta: 0:16:52  inter: 16606.0000 (26366.5806)  union: 24576.0000 (40492.3672)  iou: 0.5248 (0.6061)  time: 0.2439  data: 0.0043  max mem: 39350
+Test:  [ 350/3800]  eta: 0:16:15  inter: 9212.0000 (25298.0764)  union: 29780.0000 (40228.0351)  iou: 0.4522 (0.5937)  time: 0.2450  data: 0.0048  max mem: 39350
+Test:  [ 400/3800]  eta: 0:16:18  inter: 30763.0000 (24912.7768)  union: 35898.0000 (39574.5357)  iou: 0.7667 (0.5951)  time: 0.2413  data: 0.0030  max mem: 39350
+Test:  [ 450/3800]  eta: 0:15:49  inter: 13049.0000 (24836.9921)  union: 28953.0000 (39378.7222)  iou: 0.4958 (0.5979)  time: 0.2502  data: 0.0017  max mem: 39350
+Test:  [ 500/3800]  eta: 0:15:23  inter: 17153.0000 (25234.1519)  union: 29191.0000 (40331.2708)  iou: 0.5540 (0.5947)  time: 0.2492  data: 0.0045  max mem: 39350
+Test:  [ 550/3800]  eta: 0:15:00  inter: 23628.0000 (25304.2031)  union: 27898.0000 (40026.3033)  iou: 0.8627 (0.6028)  time: 0.2467  data: 0.0017  max mem: 39350
+Test:  [ 600/3800]  eta: 0:14:39  inter: 10613.0000 (25148.0036)  union: 34643.0000 (40104.5325)  iou: 0.7791 (0.5994)  time: 0.2469  data: 0.0030  max mem: 39350
+Test:  [ 650/3800]  eta: 0:14:18  inter: 24935.0000 (25717.1271)  union: 40851.0000 (40497.9691)  iou: 0.7619 (0.5993)  time: 0.2467  data: 0.0051  max mem: 39350
+Test:  [ 700/3800]  eta: 0:13:59  inter: 13781.0000 (25317.9743)  union: 28874.0000 (40183.8686)  iou: 0.3511 (0.5926)  time: 0.2452  data: 0.0040  max mem: 39350
+Test:  [ 750/3800]  eta: 0:13:41  inter: 27007.0000 (25104.7774)  union: 29670.0000 (40023.9029)  iou: 0.8809 (0.5950)  time: 0.2491  data: 0.0020  max mem: 39350
+Test:  [ 800/3800]  eta: 0:13:23  inter: 16234.0000 (24868.4982)  union: 46445.0000 (39592.4571)  iou: 0.5744 (0.5948)  time: 0.2489  data: 0.0011  max mem: 39350
+Test:  [ 850/3800]  eta: 0:13:07  inter: 21687.0000 (24988.7515)  union: 34210.0000 (39560.2427)  iou: 0.7630 (0.5964)  time: 0.2414  data: 0.0019  max mem: 39350
+Test:  [ 900/3800]  eta: 0:12:50  inter: 10456.0000 (24964.1510)  union: 27394.0000 (39819.6356)  iou: 0.6389 (0.5910)  time: 0.2469  data: 0.0072  max mem: 39350
+Test:  [ 950/3800]  eta: 0:12:34  inter: 24774.0000 (25291.0600)  union: 30520.0000 (39898.4794)  iou: 0.8527 (0.5929)  time: 0.2476  data: 0.0011  max mem: 39350
+Test:  [1000/3800]  eta: 0:12:18  inter: 22623.0000 (25516.6864)  union: 37301.0000 (40093.2552)  iou: 0.7722 (0.5943)  time: 0.2437  data: 0.0035  max mem: 39350
+Test:  [1050/3800]  eta: 0:12:03  inter: 19534.0000 (25479.9592)  union: 37028.0000 (40131.8626)  iou: 0.4963 (0.5928)  time: 0.2487  data: 0.0037  max mem: 39350
+Test:  [1100/3800]  eta: 0:11:48  inter: 22408.0000 (25265.4232)  union: 31370.0000 (39909.8724)  iou: 0.6562 (0.5920)  time: 0.2472  data: 0.0014  max mem: 39350
+Test:  [1150/3800]  eta: 0:11:34  inter: 9893.0000 (25460.0167)  union: 23731.0000 (39836.1421)  iou: 0.4161 (0.5962)  time: 0.2490  data: 0.0011  max mem: 39350
+Test:  [1200/3800]  eta: 0:11:19  inter: 13688.0000 (25433.1195)  union: 33132.0000 (40041.9828)  iou: 0.7170 (0.5927)  time: 0.2472  data: 0.0064  max mem: 39350
+Test:  [1250/3800]  eta: 0:11:05  inter: 2490.0000 (25184.8086)  union: 32067.0000 (39791.3583)  iou: 0.0707 (0.5909)  time: 0.2496  data: 0.0061  max mem: 39350
+Test:  [1300/3800]  eta: 0:10:51  inter: 14685.0000 (24982.4380)  union: 33847.0000 (39618.3834)  iou: 0.5271 (0.5920)  time: 0.2503  data: 0.0030  max mem: 39350
+Test:  [1350/3800]  eta: 0:10:36  inter: 23857.0000 (24995.4679)  union: 35750.0000 (39656.4863)  iou: 0.7873 (0.5918)  time: 0.2513  data: 0.0016  max mem: 39350
+Test:  [1400/3800]  eta: 0:10:23  inter: 10013.0000 (25133.8062)  union: 11590.0000 (39850.3821)  iou: 0.7597 (0.5899)  time: 0.2487  data: 0.0028  max mem: 39350
+Test:  [1450/3800]  eta: 0:10:09  inter: 16079.0000 (25005.7242)  union: 37583.0000 (39777.4313)  iou: 0.4654 (0.5881)  time: 0.2487  data: 0.0023  max mem: 39350
+Test:  [1500/3800]  eta: 0:09:55  inter: 17854.0000 (25050.0118)  union: 37322.0000 (39890.7900)  iou: 0.5126 (0.5860)  time: 0.2493  data: 0.0036  max mem: 39350
+Test:  [1550/3800]  eta: 0:09:41  inter: 15289.0000 (24982.6702)  union: 30473.0000 (39864.0780)  iou: 0.8539 (0.5875)  time: 0.2546  data: 0.0026  max mem: 39350
+Test:  [1600/3800]  eta: 0:09:34  inter: 11124.0000 (24843.5840)  union: 30868.0000 (39834.5597)  iou: 0.4312 (0.5835)  time: 0.4726  data: 0.0014  max mem: 39350
+Test:  [1650/3800]  eta: 0:09:20  inter: 16103.0000 (24792.5069)  union: 34068.0000 (39815.1329)  iou: 0.4424 (0.5820)  time: 0.2513  data: 0.0041  max mem: 39350
+Test:  [1700/3800]  eta: 0:09:06  inter: 16911.0000 (24791.0000)  union: 35727.0000 (39852.1439)  iou: 0.8147 (0.5810)  time: 0.2511  data: 0.0024  max mem: 39350
+Test:  [1750/3800]  eta: 0:08:53  inter: 17231.0000 (24731.5883)  union: 32703.0000 (39818.1049)  iou: 0.8086 (0.5798)  time: 0.2573  data: 0.0059  max mem: 39350
+Test:  [1800/3800]  eta: 0:08:40  inter: 15388.0000 (24612.7354)  union: 32867.0000 (39675.5901)  iou: 0.5323 (0.5794)  time: 0.2565  data: 0.0016  max mem: 39350
+Test:  [1850/3800]  eta: 0:08:26  inter: 11051.0000 (24564.1808)  union: 33838.0000 (39763.2169)  iou: 0.3485 (0.5772)  time: 0.2522  data: 0.0042  max mem: 39350
+Test:  [1900/3800]  eta: 0:08:13  inter: 36683.0000 (24521.9079)  union: 55390.0000 (39693.7477)  iou: 0.6377 (0.5783)  time: 0.2531  data: 0.0050  max mem: 39350
+Test:  [1950/3800]  eta: 0:08:00  inter: 11687.0000 (24479.4944)  union: 16655.0000 (39662.8606)  iou: 0.7040 (0.5787)  time: 0.2541  data: 0.0039  max mem: 39350
+Test:  [2000/3800]  eta: 0:07:46  inter: 15124.0000 (24458.8962)  union: 22414.0000 (39606.7022)  iou: 0.7727 (0.5790)  time: 0.2515  data: 0.0022  max mem: 39350
+Test:  [2050/3800]  eta: 0:07:33  inter: 6081.0000 (24347.5351)  union: 49522.0000 (39669.7088)  iou: 0.2018 (0.5764)  time: 0.2590  data: 0.0030  max mem: 39350
+Test:  [2100/3800]  eta: 0:07:20  inter: 15400.0000 (24269.1615)  union: 32404.0000 (39631.4275)  iou: 0.7590 (0.5760)  time: 0.2487  data: 0.0014  max mem: 39350
+Test:  [2150/3800]  eta: 0:07:06  inter: 14989.0000 (24294.5404)  union: 30193.0000 (39664.4883)  iou: 0.7085 (0.5757)  time: 0.2518  data: 0.0024  max mem: 39350
+Test:  [2200/3800]  eta: 0:06:53  inter: 13928.0000 (24292.5293)  union: 21221.0000 (39615.9581)  iou: 0.6678 (0.5760)  time: 0.2530  data: 0.0053  max mem: 39350
+Test:  [2250/3800]  eta: 0:06:40  inter: 19434.0000 (24164.4150)  union: 37630.0000 (39467.2863)  iou: 0.7481 (0.5749)  time: 0.2516  data: 0.0036  max mem: 39350
+Test:  [2300/3800]  eta: 0:06:27  inter: 19044.0000 (24252.8696)  union: 36943.0000 (39452.1775)  iou: 0.6094 (0.5770)  time: 0.2569  data: 0.0024  max mem: 39350
+Test:  [2350/3800]  eta: 0:06:14  inter: 15477.0000 (24202.7660)  union: 37094.0000 (39423.5670)  iou: 0.6786 (0.5768)  time: 0.2595  data: 0.0027  max mem: 39350
+Test:  [2400/3800]  eta: 0:06:01  inter: 10606.0000 (24249.2979)  union: 31684.0000 (39394.6456)  iou: 0.4450 (0.5772)  time: 0.2546  data: 0.0030  max mem: 39350
+Test:  [2450/3800]  eta: 0:05:48  inter: 26015.0000 (24336.7733)  union: 32226.0000 (39452.0419)  iou: 0.8085 (0.5787)  time: 0.2481  data: 0.0026  max mem: 39350
+Test:  [2500/3800]  eta: 0:05:35  inter: 23682.0000 (24291.7543)  union: 39992.0000 (39470.9102)  iou: 0.7951 (0.5785)  time: 0.2511  data: 0.0018  max mem: 39350
+Test:  [2550/3800]  eta: 0:05:22  inter: 28327.0000 (24389.8675)  union: 32915.0000 (39589.4219)  iou: 0.8224 (0.5789)  time: 0.2578  data: 0.0029  max mem: 39350
+Test:  [2600/3800]  eta: 0:05:09  inter: 11284.0000 (24330.2347)  union: 28612.0000 (39521.9374)  iou: 0.4499 (0.5780)  time: 0.2526  data: 0.0039  max mem: 39350
+Test:  [2650/3800]  eta: 0:04:56  inter: 16391.0000 (24376.1504)  union: 34427.0000 (39684.6386)  iou: 0.8794 (0.5772)  time: 0.2516  data: 0.0065  max mem: 39350
+Test:  [2700/3800]  eta: 0:04:43  inter: 22347.0000 (24451.4502)  union: 30497.0000 (39751.7904)  iou: 0.8614 (0.5779)  time: 0.2546  data: 0.0033  max mem: 39350
+Test:  [2750/3800]  eta: 0:04:30  inter: 22716.0000 (24505.7775)  union: 29108.0000 (39851.8229)  iou: 0.8389 (0.5774)  time: 0.2503  data: 0.0039  max mem: 39350
+Test:  [2800/3800]  eta: 0:04:17  inter: 14818.0000 (24496.0863)  union: 26219.0000 (39751.9256)  iou: 0.8248 (0.5779)  time: 0.2526  data: 0.0022  max mem: 39350
+Test:  [2850/3800]  eta: 0:04:04  inter: 12158.0000 (24604.2463)  union: 32988.0000 (39844.6725)  iou: 0.3252 (0.5773)  time: 0.2534  data: 0.0027  max mem: 39350
+Test:  [2900/3800]  eta: 0:03:51  inter: 17646.0000 (24632.1602)  union: 26131.0000 (39911.4258)  iou: 0.7429 (0.5765)  time: 0.2530  data: 0.0037  max mem: 39350
+Test:  [2950/3800]  eta: 0:03:38  inter: 19044.0000 (24637.4067)  union: 26430.0000 (39918.2053)  iou: 0.5080 (0.5764)  time: 0.2505  data: 0.0029  max mem: 39350
+Test:  [3000/3800]  eta: 0:03:25  inter: 10369.0000 (24548.3429)  union: 32466.0000 (39875.0936)  iou: 0.5185 (0.5752)  time: 0.2561  data: 0.0028  max mem: 39350
+Test:  [3050/3800]  eta: 0:03:12  inter: 13401.0000 (24541.3676)  union: 29599.0000 (39935.6273)  iou: 0.4687 (0.5751)  time: 0.2557  data: 0.0022  max mem: 39350
+Test:  [3100/3800]  eta: 0:02:59  inter: 17460.0000 (24550.2208)  union: 42232.0000 (39901.2885)  iou: 0.4651 (0.5756)  time: 0.2510  data: 0.0029  max mem: 39350
+Test:  [3150/3800]  eta: 0:02:47  inter: 15297.0000 (24451.6275)  union: 21431.0000 (39783.0094)  iou: 0.5902 (0.5755)  time: 0.2514  data: 0.0022  max mem: 39350
+Test:  [3200/3800]  eta: 0:02:34  inter: 12731.0000 (24460.0593)  union: 35199.0000 (39813.2392)  iou: 0.6379 (0.5758)  time: 0.2527  data: 0.0014  max mem: 39350
+Test:  [3250/3800]  eta: 0:02:21  inter: 14562.0000 (24399.3223)  union: 26024.0000 (39730.3360)  iou: 0.7424 (0.5746)  time: 0.2539  data: 0.0031  max mem: 39350
+Test:  [3300/3800]  eta: 0:02:08  inter: 24894.0000 (24498.9768)  union: 44029.0000 (39849.2067)  iou: 0.8220 (0.5737)  time: 0.2583  data: 0.0030  max mem: 39350
+Test:  [3350/3800]  eta: 0:01:55  inter: 9665.0000 (24488.1581)  union: 12650.0000 (39848.3499)  iou: 0.7659 (0.5744)  time: 0.2464  data: 0.0031  max mem: 39350
+Test:  [3400/3800]  eta: 0:01:42  inter: 24151.0000 (24589.8867)  union: 37209.0000 (39908.8437)  iou: 0.8719 (0.5756)  time: 0.2537  data: 0.0018  max mem: 39350
+Test:  [3450/3800]  eta: 0:01:29  inter: 16834.0000 (24634.1454)  union: 30364.0000 (39937.0905)  iou: 0.5520 (0.5760)  time: 0.2530  data: 0.0029  max mem: 39350
+Test:  [3500/3800]  eta: 0:01:16  inter: 12704.0000 (24610.1456)  union: 21018.0000 (39849.8356)  iou: 0.4199 (0.5763)  time: 0.2497  data: 0.0031  max mem: 39350
+Test:  [3550/3800]  eta: 0:01:04  inter: 27543.0000 (24618.1774)  union: 35135.0000 (39844.5284)  iou: 0.7150 (0.5757)  time: 0.2472  data: 0.0031  max mem: 39350
+Test:  [3600/3800]  eta: 0:00:51  inter: 21040.0000 (24550.2925)  union: 29908.0000 (39823.9164)  iou: 0.3687 (0.5742)  time: 0.2504  data: 0.0042  max mem: 39350
+Test:  [3650/3800]  eta: 0:00:38  inter: 14412.0000 (24493.0136)  union: 38749.0000 (39820.0520)  iou: 0.4451 (0.5733)  time: 0.2608  data: 0.0016  max mem: 39350
+Test:  [3700/3800]  eta: 0:00:25  inter: 20671.0000 (24590.4108)  union: 39531.0000 (39845.9067)  iou: 0.6553 (0.5741)  time: 0.2548  data: 0.0029  max mem: 39350
+Test:  [3750/3800]  eta: 0:00:12  inter: 21093.0000 (24645.0926)  union: 42328.0000 (39893.4452)  iou: 0.5628 (0.5750)  time: 0.2561  data: 0.0027  max mem: 39350
+Test:  [3799/3800]  eta: 0:00:00  inter: 22236.0000 (24688.9959)  union: 30142.0000 (39884.2335)  iou: 0.5745 (0.5757)  time: 0.2302  data: 0.0010  max mem: 39350
+Test: Total time: 0:16:13 (0.2563 s / it)
+* IoU 0.576 oIoU 0.619
+IoU of the network on the 3800 test images: 0.6%
+Max IoU: 0.58%
+Training time 0:55:50

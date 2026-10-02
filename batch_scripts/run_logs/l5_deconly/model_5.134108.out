@@ -1,0 +1,160 @@
+Architecture:                       x86_64
+CPU op-mode(s):                     32-bit, 64-bit
+Address sizes:                      52 bits physical, 57 bits virtual
+Byte Order:                         Little Endian
+CPU(s):                             36
+On-line CPU(s) list:                0-35
+Vendor ID:                          GenuineIntel
+Model name:                         Intel(R) Xeon(R) Gold 6354 CPU @ 3.00GHz
+CPU family:                         6
+Model:                              106
+Thread(s) per core:                 1
+Core(s) per socket:                 18
+Socket(s):                          2
+Stepping:                           6
+CPU max MHz:                        3600.0000
+CPU min MHz:                        800.0000
+BogoMIPS:                           6000.00
+Flags:                              fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb cat_l3 invpcid_single ssbd mba ibrs ibpb stibp ibrs_enhanced tpr_shadow flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid cqm rdt_a avx512f avx512dq rdseed adx smap avx512ifma clflushopt clwb intel_pt avx512cd sha_ni avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local split_lock_detect wbnoinvd dtherm ida arat pln pts vnmi avx512vbmi umip pku ospke avx512_vbmi2 gfni vaes vpclmulqdq avx512_vnni avx512_bitalg tme avx512_vpopcntdq la57 rdpid fsrm md_clear pconfig flush_l1d arch_capabilities
+Virtualization:                     VT-x
+L1d cache:                          1.7 MiB (36 instances)
+L1i cache:                          1.1 MiB (36 instances)
+L2 cache:                           45 MiB (36 instances)
+L3 cache:                           78 MiB (2 instances)
+NUMA node(s):                       2
+NUMA node0 CPU(s):                  0-17
+NUMA node1 CPU(s):                  18-35
+Vulnerability Gather data sampling: Mitigation; Microcode
+Vulnerability Itlb multihit:        Not affected
+Vulnerability L1tf:                 Not affected
+Vulnerability Mds:                  Not affected
+Vulnerability Meltdown:             Not affected
+Vulnerability Mmio stale data:      Mitigation; Clear CPU buffers; SMT disabled
+Vulnerability Retbleed:             Not affected
+Vulnerability Spec rstack overflow: Not affected
+Vulnerability Spec store bypass:    Mitigation; Speculative Store Bypass disabled via prctl
+Vulnerability Spectre v1:           Mitigation; usercopy/swapgs barriers and __user pointer sanitization
+Vulnerability Spectre v2:           Mitigation; Enhanced / Automatic IBRS, IBPB conditional, RSB filling, PBRSB-eIBRS SW sequence
+Vulnerability Srbds:                Not affected
+Vulnerability Tsx async abort:      Not affected
+Mon Apr 21 13:33:22 2025       
++---------------------------------------------------------------------------------------+
+| NVIDIA-SMI 545.23.08              Driver Version: 545.23.08    CUDA Version: 12.3     |
+|-----------------------------------------+----------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |         Memory-Usage | GPU-Util  Compute M. |
+|                                         |                      |               MIG M. |
+|=========================================+======================+======================|
+|   0  NVIDIA L40                     On  | 00000000:D5:00.0 Off |                    0 |
+| N/A   39C    P0              56W / 300W |      4MiB / 46068MiB |      0%      Default |
+|                                         |                      |                  N/A |
++-----------------------------------------+----------------------+----------------------+
+|   1  NVIDIA L40                     On  | 00000000:D6:00.0 Off |                    0 |
+| N/A   40C    P0              38W / 300W |      4MiB / 46068MiB |      0%      Default |
+|                                         |                      |                  N/A |
++-----------------------------------------+----------------------+----------------------+
+                                                                                         
++---------------------------------------------------------------------------------------+
+| Processes:                                                                            |
+|  GPU   GI   CI        PID   Type   Process name                            GPU Memory |
+|        ID   ID                                                             Usage      |
+|=======================================================================================|
+|  No running processes found                                                           |
++---------------------------------------------------------------------------------------+
+/home/akula.ha/.conda/envs/refseg/lib/python3.10/site-packages/torch/distributed/launch.py:181: FutureWarning: The module torch.distributed.launch is deprecated
+and will be removed in future. Use torchrun.
+Note that --use-env is set by default in torchrun.
+If your script expects `--local-rank` argument to be set, please
+change it to read from `os.environ['LOCAL_RANK']` instead. See 
+https://pytorch.org/docs/stable/distributed.html#launch-utility for 
+further instructions
+
+  warnings.warn(
+[2025-04-21 13:33:26,010] torch.distributed.run: [WARNING] 
+[2025-04-21 13:33:26,010] torch.distributed.run: [WARNING] *****************************************
+[2025-04-21 13:33:26,010] torch.distributed.run: [WARNING] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+[2025-04-21 13:33:26,010] torch.distributed.run: [WARNING] *****************************************
+| distributed init (rank 0): env://
+| distributed init (rank 1): env://
+Namespace(batch_size=14, epochs=50, model='ReMamber_Conv', pretrain_path='./pretrain', input_size=480, drop=0.0, drop_path=0.1, model_ema=False, model_ema_decay=0.9999, model_ema_force_cpu=False, opt='adamw', opt_eps=1e-08, opt_betas=None, clip_grad=None, momentum=0.9, weight_decay=0.0001, sched='cosine', lr=3.3e-05, lr_decoder=3.3e-05, lr_backbone=1.65e-05, lr_vssm=1.65e-05, warmup_lr=1e-06, min_lr=3e-07, decay_epochs=13.0, warmup_epochs=2, cooldown_epochs=10, patience_epochs=10, decay_rate=0.1, train_mode=True, finetune='pretrain/ReMamber_Conv.pth', data_path='./ref_dataset/data', data_set='refzom', output_dir='./l_outputs', device='cuda', seed=0, resume='l_outputs/ReMamber_Conv_dec_only/checkpoint_model:27044ce2.pth', start_epoch=0, eval=False, dist_eval=False, num_workers=8, pin_mem=True, distributed=True, world_size=2, dist_url='env://', if_amp=True, debug_mode=False, local_rank=0, model_title='model', logging='model', decoder_adapter=False, continue_lr=None, partial_freeze=False, single_epoch=True, lite_baseline=False, dec_only=True, rank=0, gpu=0, dist_backend='nccl')
+True val
+./ref_dataset/data refzom zom
+loading dataset refzom into memory...
+creating index...
+index created.
+DONE (t=15.13s)
+Preparing dataset ......
+False val
+./ref_dataset/data refzom zom
+loading dataset refzom into memory...
+creating index...
+/home/akula.ha/.conda/envs/refseg/lib/python3.10/site-packages/torch/utils/data/dataloader.py:557: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 1, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+index created.
+DONE (t=15.13s)
+Preparing dataset ......
+length of train set: 57624
+length of val set: 15406
+/home/akula.ha/.conda/envs/refseg/lib/python3.10/site-packages/torch/utils/data/dataloader.py:557: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 1, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+Creating model: ReMamber_Conv
+kwargs {}
+number of params: 9484545
+Loaded checkpoint from 'l_outputs/ReMamber_Conv_dec_only/checkpoint_model:27044ce2.pth'
+Continuing training from epoch 3...
+Model id is - model:0fecea6a
+length of train set: 50000
+length of val set: 3800
+Start training for 50 epochs
+Learning rate: 3.3e-05
+/home/akula.ha/.conda/envs/refseg/lib/python3.10/site-packages/torch/autograd/__init__.py:251: UserWarning: Grad strides do not match bucket view strides. This may indicate grad was not created according to the gradient layout contract, or that the param's strides changed since DDP was constructed.  This is not an error, but may impair performance.
+grad.sizes() = [512, 768, 1, 1], strides() = [768, 1, 768, 768]
+bucket_view.sizes() = [512, 768, 1, 1], strides() = [768, 1, 1, 1] (Triggered internally at ../torch/csrc/distributed/c10d/reducer.cpp:320.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+/home/akula.ha/.conda/envs/refseg/lib/python3.10/site-packages/torch/autograd/__init__.py:251: UserWarning: Grad strides do not match bucket view strides. This may indicate grad was not created according to the gradient layout contract, or that the param's strides changed since DDP was constructed.  This is not an error, but may impair performance.
+grad.sizes() = [512, 768, 1, 1], strides() = [768, 1, 768, 768]
+bucket_view.sizes() = [512, 768, 1, 1], strides() = [768, 1, 1, 1] (Triggered internally at ../torch/csrc/distributed/c10d/reducer.cpp:320.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+Epoch: [3]  [   0/1786]  eta: 13:00:42  lr: 0.000033  train_loss: 1.0490 (1.0490)  train_iou: 0.5099 (0.5099)  time: 26.2275  data: 12.3179  max mem: 14459
+Epoch: [3]  [  20/1786]  eta: 0:58:19  lr: 0.000033  train_loss: 0.3126 (0.3671)  train_iou: 0.6236 (0.6156)  time: 0.7694  data: 0.0133  max mem: 14459
+Epoch: [3]  [  40/1786]  eta: 0:40:11  lr: 0.000033  train_loss: 0.2841 (0.3550)  train_iou: 0.6524 (0.6303)  time: 0.7512  data: 0.0130  max mem: 14459
+Epoch: [3]  [  60/1786]  eta: 0:33:44  lr: 0.000033  train_loss: 0.2690 (0.3262)  train_iou: 0.6499 (0.6441)  time: 0.7456  data: 0.0128  max mem: 14459
+Epoch: [3]  [  80/1786]  eta: 0:30:24  lr: 0.000033  train_loss: 0.2437 (0.3184)  train_iou: 0.6445 (0.6489)  time: 0.7538  data: 0.0153  max mem: 14459
+Epoch: [3]  [ 100/1786]  eta: 0:28:15  lr: 0.000033  train_loss: 0.2471 (0.3116)  train_iou: 0.6771 (0.6569)  time: 0.7483  data: 0.0164  max mem: 14459
+Epoch: [3]  [ 120/1786]  eta: 0:26:52  lr: 0.000033  train_loss: 0.2733 (0.3134)  train_iou: 0.6634 (0.6559)  time: 0.7767  data: 0.0101  max mem: 14459
+Epoch: [3]  [ 140/1786]  eta: 0:25:43  lr: 0.000033  train_loss: 0.3111 (0.3172)  train_iou: 0.6696 (0.6534)  time: 0.7559  data: 0.0127  max mem: 14459
+Epoch: [3]  [ 160/1786]  eta: 0:24:49  lr: 0.000033  train_loss: 0.2812 (0.3140)  train_iou: 0.6201 (0.6519)  time: 0.7611  data: 0.0159  max mem: 14459
+Epoch: [3]  [ 180/1786]  eta: 0:24:02  lr: 0.000033  train_loss: 0.2593 (0.3146)  train_iou: 0.6988 (0.6547)  time: 0.7545  data: 0.0158  max mem: 14459
+Epoch: [3]  [ 200/1786]  eta: 0:23:21  lr: 0.000033  train_loss: 0.3215 (0.3165)  train_iou: 0.6137 (0.6511)  time: 0.7535  data: 0.0092  max mem: 14459
+Epoch: [3]  [ 220/1786]  eta: 0:22:47  lr: 0.000033  train_loss: 0.2594 (0.3181)  train_iou: 0.6211 (0.6496)  time: 0.7692  data: 0.0178  max mem: 14459
+Epoch: [3]  [ 240/1786]  eta: 0:22:16  lr: 0.000033  train_loss: 0.3378 (0.3200)  train_iou: 0.5949 (0.6451)  time: 0.7660  data: 0.0116  max mem: 14459
+Epoch: [3]  [ 260/1786]  eta: 0:21:47  lr: 0.000033  train_loss: 0.2950 (0.3201)  train_iou: 0.6195 (0.6438)  time: 0.7683  data: 0.0086  max mem: 14459
+Epoch: [3]  [ 280/1786]  eta: 0:21:20  lr: 0.000033  train_loss: 0.3286 (0.3204)  train_iou: 0.6391 (0.6441)  time: 0.7606  data: 0.0126  max mem: 14459
+Epoch: [3]  [ 300/1786]  eta: 0:20:54  lr: 0.000033  train_loss: 0.3126 (0.3235)  train_iou: 0.6141 (0.6427)  time: 0.7558  data: 0.0123  max mem: 14459
+Epoch: [3]  [ 320/1786]  eta: 0:20:29  lr: 0.000033  train_loss: 0.3195 (0.3247)  train_iou: 0.6498 (0.6423)  time: 0.7553  data: 0.0121  max mem: 14459
+Epoch: [3]  [ 340/1786]  eta: 0:20:07  lr: 0.000033  train_loss: 0.2547 (0.3239)  train_iou: 0.6482 (0.6432)  time: 0.7770  data: 0.0153  max mem: 14459
+Epoch: [3]  [ 360/1786]  eta: 0:19:43  lr: 0.000033  train_loss: 0.2781 (0.3220)  train_iou: 0.6834 (0.6448)  time: 0.7415  data: 0.0125  max mem: 14459
+Epoch: [3]  [ 380/1786]  eta: 0:19:20  lr: 0.000033  train_loss: 0.2721 (0.3229)  train_iou: 0.6298 (0.6436)  time: 0.7527  data: 0.0139  max mem: 14459
+Epoch: [3]  [ 400/1786]  eta: 0:18:59  lr: 0.000033  train_loss: 0.2447 (0.3205)  train_iou: 0.6414 (0.6426)  time: 0.7546  data: 0.0150  max mem: 14459
+Epoch: [3]  [ 420/1786]  eta: 0:18:39  lr: 0.000033  train_loss: 0.2952 (0.3191)  train_iou: 0.5922 (0.6411)  time: 0.7647  data: 0.0107  max mem: 14459
+Epoch: [3]  [ 440/1786]  eta: 0:18:18  lr: 0.000033  train_loss: 0.3301 (0.3195)  train_iou: 0.5802 (0.6397)  time: 0.7511  data: 0.0121  max mem: 14459
+Epoch: [3]  [ 460/1786]  eta: 0:17:58  lr: 0.000033  train_loss: 0.2508 (0.3195)  train_iou: 0.6371 (0.6392)  time: 0.7530  data: 0.0123  max mem: 14459
+Epoch: [3]  [ 480/1786]  eta: 0:17:39  lr: 0.000033  train_loss: 0.2674 (0.3177)  train_iou: 0.6446 (0.6395)  time: 0.7550  data: 0.0122  max mem: 14459
+Epoch: [3]  [ 500/1786]  eta: 0:17:20  lr: 0.000033  train_loss: 0.2673 (0.3180)  train_iou: 0.6319 (0.6397)  time: 0.7544  data: 0.0130  max mem: 14459
+Epoch: [3]  [ 520/1786]  eta: 0:17:01  lr: 0.000033  train_loss: 0.2850 (0.3179)  train_iou: 0.6370 (0.6392)  time: 0.7501  data: 0.0184  max mem: 14459
+Epoch: [3]  [ 540/1786]  eta: 0:16:42  lr: 0.000033  train_loss: 0.2707 (0.3177)  train_iou: 0.6157 (0.6381)  time: 0.7544  data: 0.0111  max mem: 14459
+Epoch: [3]  [ 560/1786]  eta: 0:16:23  lr: 0.000033  train_loss: 0.3061 (0.3181)  train_iou: 0.6511 (0.6386)  time: 0.7479  data: 0.0112  max mem: 14459
+Epoch: [3]  [ 580/1786]  eta: 0:16:05  lr: 0.000033  train_loss: 0.2955 (0.3174)  train_iou: 0.6473 (0.6387)  time: 0.7427  data: 0.0087  max mem: 14459
+Epoch: [3]  [ 600/1786]  eta: 0:15:47  lr: 0.000033  train_loss: 0.2554 (0.3178)  train_iou: 0.6511 (0.6389)  time: 0.7545  data: 0.0129  max mem: 14459
+Epoch: [3]  [ 620/1786]  eta: 0:15:29  lr: 0.000033  train_loss: 0.3039 (0.3193)  train_iou: 0.6223 (0.6386)  time: 0.7460  data: 0.0108  max mem: 14459
+Epoch: [3]  [ 640/1786]  eta: 0:15:12  lr: 0.000033  train_loss: 0.2817 (0.3196)  train_iou: 0.6170 (0.6375)  time: 0.7531  data: 0.0100  max mem: 14459
+Epoch: [3]  [ 660/1786]  eta: 0:14:54  lr: 0.000033  train_loss: 0.3326 (0.3209)  train_iou: 0.5893 (0.6367)  time: 0.7557  data: 0.0128  max mem: 14459
+Epoch: [3]  [ 680/1786]  eta: 0:14:37  lr: 0.000033  train_loss: 0.3406 (0.3213)  train_iou: 0.6017 (0.6363)  time: 0.7595  data: 0.0130  max mem: 14459
+Epoch: [3]  [ 700/1786]  eta: 0:14:20  lr: 0.000033  train_loss: 0.3417 (0.3224)  train_iou: 0.6562 (0.6366)  time: 0.7494  data: 0.0110  max mem: 14459
+Epoch: [3]  [ 720/1786]  eta: 0:14:03  lr: 0.000033  train_loss: 0.2641 (0.3218)  train_iou: 0.6279 (0.6366)  time: 0.7472  data: 0.0162  max mem: 14459
+Epoch: [3]  [ 740/1786]  eta: 0:13:46  lr: 0.000033  train_loss: 0.2872 (0.3227)  train_iou: 0.5878 (0.6357)  time: 0.7531  data: 0.0150  max mem: 14459
+Epoch: [3]  [ 760/1786]  eta: 0:13:29  lr: 0.000033  train_loss: 0.3059 (0.3227)  train_iou: 0.6378 (0.6356)  time: 0.7393  data: 0.0137  max mem: 14459
+Epoch: [3]  [ 780/1786]  eta: 0:13:12  lr: 0.000033  train_loss: 0.2703 (0.3222)  train_iou: 0.6409 (0.6356)  time: 0.7490  data: 0.0082  max mem: 14459
+Epoch: [3]  [ 800/1786]  eta: 0:12:56  lr: 0.000033  train_loss: 0.2448 (0.3220)  train_iou: 0.6268 (0.6355)  time: 0.7619  data: 0.0098  max mem: 14459
+Epoch: [3]  [ 820/1786]  eta: 0:12:39  lr: 0.000033  train_loss: 0.3350 (0.3230)  train_iou: 0.5927 (0.6352)  time: 0.7462  data: 0.0120  max mem: 14459
+slurmstepd: error: *** JOB 134108 ON d3230 CANCELLED AT 2025-04-21T13:45:12 ***
